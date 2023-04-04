@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_background"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_above="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color4"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sourceLanguage"
+                android:layout_width="match_parent"
+                android:textColor="@color/color4"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/color4"
+                android:hint=""
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/targetLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color4"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/translateBtn"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sourceLanguageBtn"
+            android:layout_width="200dp"
+            app:icon="@drawable/translate"
+            android:textColor="@color/white"
+            app:iconTint="@color/white"
+            android:layout_height="60dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:text="English"
+            android:textSize="16dp"
+            app:cornerRadius="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/forward_icon"
+            app:tint="@color/color2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/targetLanguageBtn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            app:icon="@drawable/translate"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Turkish"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/translateBtn"
+        android:layout_marginBottom="5dp"
+        android:layout_width="350dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:text="Translate"
+        android:textSize="25sp"
+        app:cornerRadius="15dp"/>
+
+</RelativeLayout>
